@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Quytrinhthucthi30032020</string>
+    <string name="editText_hint">Nhập giá trị thứ 1</string>
+    <string name="editText1_hint">Nhập giá trị thứ 2</string>
+
+    <string name="button1_reset_name">Reset</string>
+    <string name="button2_plus_name">+</string>
+    <string name="button3_minus_name">-</string>
+    <string name="button4_multiply_name">*</string>
+    <string name="button5_divine_name">/</string>
+
+    <string name="textView_title_name">Máy tính bỏ túi</string>
+    <string name="textView_result_name">Kết quả: </string>
+</resources>
