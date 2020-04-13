@@ -15,7 +15,12 @@ public class MainActivity extends AppCompatActivity {
     EditText mEditText_number2;
     Button mButton_reset, mButton_plus, mButton_minus, mButton_multiply, mButton_divine;
     TextView mResult_textView;
-
+    String mValue1;
+    String mValue2;
+    int mNumber1;
+    int mNumber2;
+    int mResult;
+    float mResult1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,15 +42,15 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                String value1 = mEditText_number1.getText().toString();
-                String value2 = mEditText_number2.getText().toString();
-                if ((value1.isEmpty()) || (value2.isEmpty())) {
+                mValue1 = mEditText_number1.getText().toString();
+                mValue2 = mEditText_number2.getText().toString();
+                if ((mValue1.isEmpty()) || (mValue2.isEmpty())) {
                     mResult_textView.setText("Error");
                 } else {
-                    int number1 = Integer.parseInt(value1);
-                    int number2 = Integer.parseInt(value2);
-                    int result = number1 + number2;
-                    mResult_textView.setText(Integer.toString(result));
+                    mNumber1 = Integer.parseInt(mValue1);
+                    mNumber2 = Integer.parseInt(mValue2);
+                    mResult = mNumber1 + mNumber2;
+                    mResult_textView.setText(Integer.toString(mResult));
                 }
             }
         });
@@ -60,10 +65,10 @@ public class MainActivity extends AppCompatActivity {
                 if ((value1.isEmpty()) || (value2.isEmpty())) {
                     mResult_textView.setText("Error");
                 } else {
-                    int number1 = Integer.parseInt(value1);
-                    int number2 = Integer.parseInt(value2);
-                    int result = number1 - number2;
-                    mResult_textView.setText(Integer.toString(result));
+                 mNumber1 = Integer.parseInt(value1);
+                    mNumber2 = Integer.parseInt(value2);
+                    mResult = mNumber1 - mNumber2;
+                    mResult_textView.setText(Integer.toString(mResult));
                 }
             }
         });
@@ -78,10 +83,10 @@ public class MainActivity extends AppCompatActivity {
                 if ((value1.isEmpty()) || (value2.isEmpty())) {
                     mResult_textView.setText("Error");
                 } else {
-                    int number1 = Integer.parseInt(value1);
-                    int number2 = Integer.parseInt(value2);
-                    int result = number1 * number2;
-                    mResult_textView.setText(Integer.toString(result));
+                    mNumber1 = Integer.parseInt(value1);
+                    mNumber2 = Integer.parseInt(value2);
+                    mResult = mNumber1 * mNumber2;
+                    mResult_textView.setText(Integer.toString(mResult));
                 }
             }
         });
@@ -96,10 +101,10 @@ public class MainActivity extends AppCompatActivity {
                 if ((value1.isEmpty()) || (value2.isEmpty())) {
                     mResult_textView.setText("Error");
                 } else {
-                    int number1 = Integer.parseInt(value1);
-                    int number2 = Integer.parseInt(value2);
-                    float result = number1 / (number2 * 1.0f);
-                    mResult_textView.setText(Float.toString(result));
+                    mNumber1 = Integer.parseInt(value1);
+                    mNumber2 = Integer.parseInt(value2);
+                    mResult1 = mNumber1 / (mNumber2 * 1.0f);
+                    mResult_textView.setText(Float.toString(mResult1));
                 }
             }
         });
@@ -108,6 +113,8 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
+                mEditText_number1.setText("");
+                mEditText_number2.setText("");
                 mResult_textView.setText("");
             }
         });
