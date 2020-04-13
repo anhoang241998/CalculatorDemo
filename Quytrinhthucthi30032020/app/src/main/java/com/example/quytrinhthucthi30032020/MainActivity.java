@@ -39,10 +39,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String value1 = mEditText_number1.getText().toString();
                 String value2 = mEditText_number2.getText().toString();
-                int number1 = Integer.parseInt(value1);
-                int number2 = Integer.parseInt(value2);
-                int result = number1 + number2;
-                mResult_textView.setText(Integer.toString(result));
+                if ((value1.isEmpty()) || (value2.isEmpty())) {
+                    mResult_textView.setText("Error");
+                } else {
+                    int number1 = Integer.parseInt(value1);
+                    int number2 = Integer.parseInt(value2);
+                    int result = number1 + number2;
+                    mResult_textView.setText(Integer.toString(result));
+                }
             }
         });
 
@@ -53,10 +57,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String value1 = mEditText_number1.getText().toString();
                 String value2 = mEditText_number2.getText().toString();
-                int number1 = Integer.parseInt(value1);
-                int number2 = Integer.parseInt(value2);
-                int result = number1 - number2;
-                mResult_textView.setText(Integer.toString(result));
+                if ((value1.isEmpty()) || (value2.isEmpty())) {
+                    mResult_textView.setText("Error");
+                } else {
+                    int number1 = Integer.parseInt(value1);
+                    int number2 = Integer.parseInt(value2);
+                    int result = number1 - number2;
+                    mResult_textView.setText(Integer.toString(result));
+                }
             }
         });
 
@@ -67,10 +75,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String value1 = mEditText_number1.getText().toString();
                 String value2 = mEditText_number2.getText().toString();
-                int number1 = Integer.parseInt(value1);
-                int number2 = Integer.parseInt(value2);
-                int result = number1 * number2;
-                mResult_textView.setText(Integer.toString(result));
+                if ((value1.isEmpty()) || (value2.isEmpty())) {
+                    mResult_textView.setText("Error");
+                } else {
+                    int number1 = Integer.parseInt(value1);
+                    int number2 = Integer.parseInt(value2);
+                    int result = number1 * number2;
+                    mResult_textView.setText(Integer.toString(result));
+                }
             }
         });
 
@@ -81,10 +93,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String value1 = mEditText_number1.getText().toString();
                 String value2 = mEditText_number2.getText().toString();
-                int number1 = Integer.parseInt(value1);
-                int number2 = Integer.parseInt(value2);
-                float result = number1 / (number2 * 1.0f);
-                mResult_textView.setText(Float.toString(result));
+                if ((value1.isEmpty()) || (value2.isEmpty())) {
+                    mResult_textView.setText("Error");
+                } else {
+                    int number1 = Integer.parseInt(value1);
+                    int number2 = Integer.parseInt(value2);
+                    float result = number1 / (number2 * 1.0f);
+                    mResult_textView.setText(Float.toString(result));
+                }
             }
         });
 
